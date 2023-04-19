@@ -23,7 +23,7 @@ Reliability:
 
 __________________________________
 
-Koo, T. K., & Li, M. Y. (2016). A Guideline of Selecting and Reporting Intraclass Correlation Coefficients for Reliability Research. Journal of Chiropractic Medicine, 15(2), 155–163. https://doi.org/10.1016/j.jcm.2016.02.012
+Koo, T. K., & Li, M. Y. (2016). A Guideline of Selecting and Reporting Intraclass Correlation Coefficients for Reliability Research. Journal of Chiropractic Medicine, 15(2), 155–163. https://doi.org/10.1016/j.jcm.2016.02.012 \\
 Hopkins, W. G. (2015). Spreadsheets for Analysis of Validity and reliability. Sportsscience 19, 36-44.
 Shrout, P. E., & Fleiss, J. L. (1979). Intraclass correlations: uses in assessing rater reliability.1. Shrout PE, Fleiss JL: Intraclass correlations: uses in assessing rater reliability. Psychol Bull 1979, 86:420–8. Psychological Bulletin, 86(2), 420–428. http://www.ncbi.nlm.nih.gov/pubmed/18839484
 McGraw, K. O., & Wong, S. P. (1996). “Forming inferences about some intraclass correlations coefficients”: Correction. Psychological Methods, 1(4), 390–390. https://doi.org/10.1037//1082-989x.1.4.390
