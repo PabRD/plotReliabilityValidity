@@ -1,5 +1,5 @@
 # plotReliabilityValidity
-Quicly plot correlation plots for validity and reliability studies with associated statistics
+Quickly plot correlation plots for validity and reliability studies with associated statistics
 
 ______________________________________
 Validity:
