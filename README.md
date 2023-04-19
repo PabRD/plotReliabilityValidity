@@ -8,7 +8,7 @@ Validity:
 - TEE%: TEE applied to the criterion group average
 - r: Pearson's r
 
-
+![alt text](https://github.com/PabRD/plotReliabilityValidity/blob/main/gitHub_Exemple2.png)
 
 
 ___________________________________
