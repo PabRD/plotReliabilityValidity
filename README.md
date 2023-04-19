@@ -8,7 +8,7 @@ Validity:
 - TEE%: TEE applied to the criterion group average
 - r: Pearson's r
 
-![alt text](https://github.com/PabRD/plotReliabilityValidity/blob/main/gitHub_Exemple2.png)
+![alt text](https://github.com/PabRD/plotReliabilityValidity/blob/main/gitHub_ExempleValidity.png)
 
 
 ___________________________________
@@ -19,3 +19,4 @@ Reliability:
 - r: Pearson's r
 - SWC (Smallest Worthwile Change): 0.2 times the between participant standard deviation
 
+![alt text](https://github.com/PabRD/plotReliabilityValidity/blob/main/gitHub_ExempleReliability.png)
