@@ -4,7 +4,7 @@ Quickly plot correlation plots for validity and reliability studies with associa
 ______________________________________
 Validity:
 - bias: mean difference between the two methods
-- TEE (Typical Error of Estimate): the differences standard deviation                                 Siegel and al. (2016)
+- TEE (Typical Error of Estimate)                                 Siegel and al. (2016)
 - TEE%: TEE as coefficient of variation (CV) in %
 - r: Pearson's r
 
