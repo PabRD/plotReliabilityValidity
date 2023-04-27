@@ -4,7 +4,7 @@ Quickly plot correlation plots for validity and reliability studies with associa
 ______________________________________
 Validity:
 - bias: mean difference between the two methods
-- TEE (Typical Error of Estimate): the differences standard deviation                                 (Hopkins, 2015)
+- TEE (Typical Error of Estimate): the differences standard deviation                                 Siegel and al. (2016)
 - TEE%: TEE as coefficient of variation (CV) in %
 - r: Pearson's r
 
@@ -30,3 +30,5 @@ Hopkins, W. G. (2015). Spreadsheets for Analysis of Validity and reliability. Sp
 Shrout, P. E., & Fleiss, J. L. (1979). Intraclass correlations: uses in assessing rater reliability.1. Shrout PE, Fleiss JL: Intraclass correlations: uses in assessing rater reliability. Psychol Bull 1979, 86:420–8. Psychological Bulletin, 86(2), 420–428. http://www.ncbi.nlm.nih.gov/pubmed/18839484
 
 McGraw, K. O., & Wong, S. P. (1996). “Forming inferences about some intraclass correlations coefficients”: Correction. Psychological Methods, 1(4), 390–390. https://doi.org/10.1037//1082-989x.1.4.390
+
+Siegel and al. (2016) Practical Business Statistics (Sixth Edition), page 325
