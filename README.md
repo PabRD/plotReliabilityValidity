@@ -2,7 +2,7 @@
 Quickly plot correlation plots for validity and reliability studies with associated statistics
 
 ______________________________________
-**Validity**
+##Validity##
 - bias: 
 $$bias = \overline{X_p} - \overline{X_c}$$  
 $$bias 100 = \frac{\overline{X_p} - \overline{X_c}}{\overline{X_c}}\cdot 100$$
@@ -23,7 +23,7 @@ pearsonR = corrcoef(criterion,practical)
 
 
 ___________________________________
-**Reliability**
+##Reliability##
 - TEM (Typical Error of Measurement), also called Standard Error of Measurement (SEM) (Hopkins, 2015)
 $$TEM = \frac{{\sigma}_{diff}}{\sqrt{2}}$$
 - TEM%: TEM as coefficient of variation (CV) in %
