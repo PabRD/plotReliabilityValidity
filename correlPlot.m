@@ -11,36 +11,29 @@ function [structStat] = correlPlot(criterion,essaiB,cond,color)
 %   By default cond = 'valid'
 %
 %
-%   correlPlot(criterion,essaiB,cond,'dark') forces a white, grey and black correlation plot
+%   correlPlot(criterion,essaiB,cond,color) use your own color with 2 colors : scatter data color with the first line and identity line & fitting line with last line color
 %
-%   [structStat] = correlPlot(criterion,essaiB,cond) returns a structure
+%   [structStat] = correlPlot(criterion,essaiB,cond,col) returns a structure
 %   object with statistical parameters displayed on the plot.
 %
 %   See also SCATTER, FITLM, LINE.
+%   https://github.com/PabRD/plotReliabilityValidity/blob/main/README.md
 %   @MatPab
 
-col  =    [0.2510         0    0.2941
-    0.4627    0.1647    0.5137
-    0.6000    0.4392    0.6706
-    0.7608    0.6471    0.8118
-    0.9059    0.8314    0.9098
-    0.9686    0.9686    0.9686
-    0.8510    0.9412    0.8275
-    0.6510    0.8588    0.6275
-    0.3529    0.6824    0.3804
-    0.1059    0.4706    0.2157
-    0    0.2667    0.1059];
-colData = [0.4627    0.25    0.5137];
+col  =    [0 0 0; 0.7412 0.7412 0.7412];
+colData = col(1,:);
 
 if nargin==2
     
     cond  = "valid";
     
 elseif nargin==4
-    if strcmpi(color,'dark')
-        col = cbrewer('seq','Greys',9);
-        colData = col(end,:);
-        
+    if size(color,1)==1
+        col = color;
+        colData = color;
+    else
+        col = color;
+        colData = col(1,:);
     end
     
 end
@@ -60,14 +53,14 @@ else
 end
 
 % scatter(essaiA,essaiB,35,[0.4627    0.25    0.5137],'filled')
-scatter(criterion,essaiB,35,colData(end,:),'filled')
+scatter(criterion,essaiB,35,colData(end,:),'filled','MarkerFaceAlpha',0.8)
 
 hold on
 lim  = ceil(max([criterion essaiB],[],'all'))+0.05*max([criterion essaiB],[],'all');
-plot([0 lim],[0 lim],'Color',col(4,:),'LineStyle','--','LineWidth',2)
+plot([0 lim],[0 lim],'Color',col(end,:),'LineStyle','--','LineWidth',2)
 % plot([0 lim],[0 lim],'Color',col(4,:),'LineStyle','--','LineWidth',2)
 f_fitV0 = @(x) coeff(2)*x+coeff(1);
-fplot(f_fitV0,[0 lim],'Color',col(4,:),'LineWidth',2)
+fplot(f_fitV0,[0 lim],'Color',col(end,:),'LineWidth',2)
 ylim([min([criterion essaiB],[],'all')-0.1*max([criterion essaiB],[],'all') lim])
 xlim([min([criterion essaiB],[],'all')-0.1*max([criterion essaiB],[],'all') lim])
 
@@ -80,7 +73,7 @@ if strcmpi(cond,'valid')
     
     sY = std(criterion,'omitnan'); %sd criterion
     sEE = sY*(sqrt((1-mdl.Rsquared.Ordinary)*((nbSuj-1)/(nbSuj-2))));       % Siegel and al. (2016) Practical Business Statistics (Sixth Edition), page 325
-    lB95 = sqrt((nbSuj-1)*sEE^2/(chi2inv(1-(1-0.95)/2,nbSuj-1)));           
+    lB95 = sqrt((nbSuj-1)*sEE^2/(chi2inv(1-(1-0.95)/2,nbSuj-1)));
     uB95 = sqrt((nbSuj-1)*sEE^2/(chi2inv((1-0.95)/2,nbSuj-1)));
     
     
@@ -127,9 +120,9 @@ elseif strcmpi(cond,'repro')
     TEM = std(diff([criterion essaiB],1,2))/sqrt(2);                           % Hopkins 2009: Typical Error of Measurement
     TEM100 = TEM/mean(criterion)*100;                                          % TEM as coefficient of variation (%)
     
-    lB95 = sqrt((nbSuj-1)*TEM^2/(chi2inv(1-(1-0.95)/2,nbSuj-1)));           
+    lB95 = sqrt((nbSuj-1)*TEM^2/(chi2inv(1-(1-0.95)/2,nbSuj-1)));
     uB95 = sqrt((nbSuj-1)*TEM^2/(chi2inv((1-0.95)/2,nbSuj-1)));
-
+    
     
     %     SDo = std(essaiA);
     %     SDp = SDo*sqrt(iccData);
