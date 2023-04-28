@@ -2,8 +2,8 @@
 Quickly plot correlation plots for validity and reliability studies with associated statistics
 
 ```MATLAB
-criterion = columVector1;
-practical = columVector2;
+criterion = columVector1;     % criterion or first test data as a n by 1 column vector
+practical = columVector2;     % practical or retest data as a n by 1 column vector
 
 recapStatValid = correlPlot(criterion,practical,'valid','dark');
 recapStatRepro = correlPlot(criterion,practical,'repro','dark');
