@@ -132,7 +132,7 @@ elseif strcmpi(cond,'repro')
     SDp = std(criterion);
     SWC = SDp*0.2;                                                          % Hopkins 2015: dans sa fiche excel
     
-    sensi = TEM100>SWC;
+    sensi = TEM>SWC;
     switch sensi
         case 1
             sensibility = ' (poor)';
