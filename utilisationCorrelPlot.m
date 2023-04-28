@@ -35,4 +35,4 @@ correlPlot(criterion,test,'valid')
 % We want to know if what we measure is reliable
 retest = test;
 figure
-correlPlot(criterion,retest,'repro',col)
+correlPlot(criterion,retest,'repro',col)        % I specify my colors
