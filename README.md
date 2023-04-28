@@ -7,7 +7,7 @@ Validity:
 $$bias100 = \frac{\overline{X_p} - \overline{X_c}}{\overline{X_c}}$$
 - TEE (Typical Error of Estimate)                                 Siegel and al. (2016) $$TEE = S_y\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %   
-$$TEE100 = \frac{TEE \cdot 100}{\overline{X_c}}$$
+$$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - r: Pearson's r
 
 ![alt text](https://github.com/PabRD/plotReliabilityValidity/blob/main/gitHub_ExempleValidity.png)
