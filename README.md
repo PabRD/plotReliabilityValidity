@@ -6,8 +6,8 @@ Quickly plot correlation plots for validity and reliability studies with associa
 criterion = columVector1;     % criterion or first test data as a n by 1 column vector
 practical = columVector2;     % practical or retest data as a n by 1 column vector
 
-recapStatValid = correlPlot(criterion,practical,'valid','dark');
-recapStatRepro = correlPlot(criterion,practical,'repro','dark');
+recapStatValid = correlPlot(criterion,practical,'valid');
+recapStatRepro = correlPlot(criterion,practical,'repro');
 % see help correlPlot or the exemple file provided "utilisationCorrelPlot.m" for more infos
 ```
 
