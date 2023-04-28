@@ -23,12 +23,12 @@ With $\overline{X_c}$ and $\overline{X_p}$ being the average of the criterion an
 - TEE (Typical Error of Estimate) alos called Standard Error of Estimate (SEE) based on Siegel and al. (2016) and Hopkins (2015)
 $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 
-with $\sigma_c$ the standard deviation of the criterion group, $r$ the coefficient of correlation
+with $\sigma_c$ the standard deviation of the criterion group, $r$ the coefficient of correlation and $n$ the sample size
 - TEE%: TEE as coefficient of variation (CV) in %   
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - TEE 95% Confidence intervals are calculated as:
 $$\sqrt{\frac{(n-1)s^2}{\chi^2_1}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_2}}$$
-with $s=TEE$, $n = sample size$ and $\chi^2$ probability calculated using ``chi2inv`` function
+with $s=TEE$ and $\chi^2$ probability calculated using ``chi2inv`` function
 
 - r: Pearson's coefficient of correlation
 ```MATLAB
