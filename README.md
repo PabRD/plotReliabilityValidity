@@ -1,6 +1,15 @@
 # plotReliabilityValidity
 Quickly plot correlation plots for validity and reliability studies with associated statistics
 
+```MATLAB
+criterion = columVector1;
+practical = columVector2;
+
+recapStatValid = correlPlot(criterion,practical,'valid','dark');
+recapStatRepro = correlPlot(criterion,practical,'repro','dark');
+% see help correlPlot for more infos
+```
+
 ______________________________________
 ##Validity##
 - bias: 
