@@ -12,7 +12,7 @@ recapStatRepro = correlPlot(criterion,practical,'repro','dark');
 
 ______________________________________
 
-##Validity##
+## Validity
 
 - bias: 
 $$bias = \overline{X_p} - \overline{X_c}$$  
