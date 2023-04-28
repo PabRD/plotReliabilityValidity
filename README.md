@@ -14,7 +14,8 @@ $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - r: Pearson's r 
 ```
-corrcoef(criterion,practical)
+pearsonR = corrcoef(criterion,practical)
+% see doc corrcoef for more infos
 ```
 
 
