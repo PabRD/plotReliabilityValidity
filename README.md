@@ -11,7 +11,9 @@ recapStatRepro = correlPlot(criterion,practical,'repro','dark');
 ```
 
 ______________________________________
+
 ##Validity##
+
 - bias: 
 $$bias = \overline{X_p} - \overline{X_c}$$  
 $$bias 100 = \frac{\overline{X_p} - \overline{X_c}}{\overline{X_c}}\cdot 100$$
