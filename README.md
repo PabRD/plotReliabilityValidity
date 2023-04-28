@@ -23,7 +23,7 @@ With $\overline{X_c}$ and $\overline{X_p}$ being the average of the criterion an
 $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %   
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
-- 95% Confidence intervals are calculated as:
+- TEE 95% Confidence intervals are calculated as:
 $$\sqrt{\frac{(n-1)s^2}{\chi^2_L}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_R}}$$
 with $n = sample size$ and $\chi^2$ probability calculated as follows:
 ```MATLAB
