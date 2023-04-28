@@ -24,7 +24,8 @@ $$ICC_{2,1} = \frac{MS_R-MS_E}{MS_R+(k-1)MS_E+\frac{k}{n}(MS_C-MS_E)}$$
 with $MS_R = mean\ square\ for\ rows$, $MS_E=mean\ square\ for\ error$; $MS_C=mean\ square\ for\ columns$; $n =number\ of\ subjects$; $k = number\ of\ raters/measurements$.
 - r: Pearson's r
 - SWC (Smallest Worthwile Change): 0.2 times the between participant standard deviation. Sensitivity is classified as good when TEM as CV% is inferior to SWC. Otherwise, sensitivity is classified as poor
-
+$$SWC = 0.2\cdot\sigma_1$$
+with $\sigma_1 = standard\ deviation\ of\ first\ test$
 ![alt text](https://github.com/PabRD/plotReliabilityValidity/blob/main/gitHub_ExempleReliability.png)
 
 __________________________________
