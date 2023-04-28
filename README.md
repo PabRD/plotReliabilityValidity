@@ -7,7 +7,7 @@ practical = columVector2;
 
 recapStatValid = correlPlot(criterion,practical,'valid','dark');
 recapStatRepro = correlPlot(criterion,practical,'repro','dark');
-% see help correlPlot or the exemple file provided "exemple_CorrelPlot.m" for more infos
+% see help correlPlot or the exemple file provided "utilisationCorrelPlot.m" for more infos
 ```
 
 ______________________________________
