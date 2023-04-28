@@ -13,7 +13,7 @@ $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %   
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - r: Pearson's r 
-```ruby
+```MATLAB
 pearsonR = corrcoef(criterion,practical)
 % see doc corrcoef for more infos
 ```
