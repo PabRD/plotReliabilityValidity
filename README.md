@@ -26,7 +26,7 @@ $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - TEE 95% Confidence intervals are calculated as:
 $$\sqrt{\frac{(n-1)s^2}{\chi^2_1}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_2}}$$
-with $n = sample size$ and $\chi^2$ probability calculated using ``chi2inv`` function
+with $s=TEE$, $n = sample size$ and $\chi^2$ probability calculated using ``chi2inv`` function
 
 - r: Pearson's coefficient of correlation
 ```MATLAB
@@ -44,6 +44,9 @@ ___________________________________
 $$TEM = \frac{{\sigma}_{diff}}{\sqrt{2}}$$
 - TEM%: TEM as coefficient of variation (CV) in %
 $$CV = \frac{TEM \cdot 100}{\overline{X_1}}$$
+- TEM 95% Confidence intervals are calculated as:
+$$\sqrt{\frac{(n-1)s^2}{\chi^2_1}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_2}}$$
+with $s = TEM$, $n = sample size$ and $\chi^2$ probability calculated using ``chi2inv`` function
 - ICC (Intraclass Correlation Coefficients): Reported as "ICC2,1" (Shrout and Fleiss convention) or "Two-way mixed effects, absolute agreement, single rater/measurement" (McGraw and Wong convention) for test-retest reliability study (Koo and Li, 2016).
 $$ICC_{2,1} = \frac{MS_R-MS_E}{MS_R+(k-1)MS_E+\frac{k}{n}(MS_C-MS_E)}$$
 with $MS_R = mean\ square\ for\ rows$, $MS_E=mean\ square\ for\ error$; $MS_C=mean\ square\ for\ columns$; $n =number\ of\ subjects$; $k = number\ of\ raters/measurements$.
