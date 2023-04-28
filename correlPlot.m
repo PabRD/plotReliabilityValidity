@@ -80,8 +80,8 @@ if strcmpi(cond,'valid')
     
     sY = std(criterion,'omitnan'); %sd criterion
     sEE = sY*(sqrt((1-mdl.Rsquared.Ordinary)*((nbSuj-1)/(nbSuj-2))));       % Siegel and al. (2016) Practical Business Statistics (Sixth Edition), page 325
-    lB95 = sqrt((nbSuj-2)*sEE^2/(chi2inv(1-(1-0.95)/2,nbSuj-2)));           % Hopkins validity statistics spreadsheet
-    uB95 = sqrt((nbSuj-2)*sEE^2/(chi2inv((1-0.95)/2,nbSuj-2)));
+    lB95 = sqrt((nbSuj-1)*sEE^2/(chi2inv(1-(1-0.95)/2,nbSuj-1)));           
+    uB95 = sqrt((nbSuj-1)*sEE^2/(chi2inv((1-0.95)/2,nbSuj-1)));
     
     
     %     TEE = std(diff([essaiA essaiB],1,2));                                   % Hopkins (2009): Typical Error of Estimate
