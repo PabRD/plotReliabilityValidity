@@ -25,12 +25,12 @@ $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - 95% Confidence intervals are calculated as:
 $$\sqrt{\frac{(n-1)s^2}{\chi^2_L}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_R}}$$
-with $n = sample size$ and $\chi^2$ probability with $\alpha = 0.05$ calculated as follows:
+with $n = sample size$ and $\chi^2$ probability calculated as follows:
 ```MATLAB
-df = n-1;
-p1 = alpha/2;
-p2 = 1 - alpha + alpha/2; 
-chi1 = chi2inv(p1,df);
+df = n-1;                   % n = sample size
+p1 = alpha/2;               % alpha = significance level (here 0.05)
+p2 = 1 - alpha + alpha/2;   
+chi1 = chi2inv(p1,df);      % Inverse of the chi-square cumulative distribution function
 chi2 = chi2inv(p2,df);
 ```
 
