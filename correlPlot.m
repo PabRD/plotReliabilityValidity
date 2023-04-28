@@ -96,7 +96,7 @@ if strcmpi(cond,'valid')
     CI = mean(dataCI)' + ts.*SEMM';                                         % Confidence Intervals
     CV = mean(CV);
     
-    str = {sprintf('n = %d',nbSuj), sprintf('bias = %1.2f',diff(mean([criterion essaiB]))),sprintf('TEE = %1.2f [%1.2f;%1.2f]',TEE,lB95,uB95),strcat('TEE\%',sprintf(' = %1.2f [%1.2f;%1.2f]',TEE100,lB95/mean(criterion)*100,uB95/mean(criterion)*100)), sprintf('r = %1.3f', pearsonR(2)), strcat("$r^2$",sprintf(' = %1.3f',r_squared)),sprintf('y = %1.2fx%s%1.2f',coeff(2),signe,abs(coeff(1)))};
+    str = {sprintf('n = %d',nbSuj), sprintf('bias = %1.2f',diff(mean([criterion essaiB]))),sprintf('TEE = %1.2f (%1.2f;%1.2f)',TEE,lB95,uB95),strcat('TEE\%',sprintf(' = %1.2f (%1.2f;%1.2f)',TEE100,lB95/mean(criterion)*100,uB95/mean(criterion)*100)), sprintf('r = %1.3f', pearsonR(2)), strcat("$r^2$",sprintf(' = %1.3f',r_squared)),sprintf('y = %1.2fx%s%1.2f',coeff(2),signe,abs(coeff(1)))};
     text(0.05,0.75,str,'Units','normalized','Interpreter','latex','FontSize',9,'Color',[.2 .2 .2])
     %text(0.05,0.95,str(end),'Units','normalized','Interpreter','latex','FontSize',9,'Color',[.2 .2 .2])
     hold off
@@ -127,6 +127,10 @@ elseif strcmpi(cond,'repro')
     TEM = std(diff([criterion essaiB],1,2))/sqrt(2);                           % Hopkins 2009: Typical Error of Measurement
     TEM100 = TEM/mean(criterion)*100;                                          % TEM as coefficient of variation (%)
     
+    lB95 = sqrt((nbSuj-1)*TEM^2/(chi2inv(1-(1-0.95)/2,nbSuj-1)));           
+    uB95 = sqrt((nbSuj-1)*TEM^2/(chi2inv((1-0.95)/2,nbSuj-1)));
+
+    
     %     SDo = std(essaiA);
     %     SDp = SDo*sqrt(iccData);
     SDp = std(criterion);
@@ -141,7 +145,7 @@ elseif strcmpi(cond,'repro')
     end
     
     
-    str = {sprintf('n = %d',nbSuj), sprintf('TEM = %1.2f', TEM),strcat('TEM\%',sprintf(' = %1.2f',TEM100)),sprintf('$ICC_{2,1} = %1.3f$ (%1.2f ; %1.2f)',iccData,lbData,ubDaat), sprintf('r = %1.3f', pearsonR(2)), strcat(sprintf('SWC = %1.2f',SWC),sensibility),sprintf('y = %1.2fx+%1.2f',coeff(2),coeff(1))};
+    str = {sprintf('n = %d',nbSuj), sprintf('TEM = %1.2f (%1.2f;%1.2f)', TEM,lB95,uB95),strcat('TEM\%',sprintf(' = %1.2f (%1.2f;%1.2f)',TEM100,lB95/mean(criterion)*100,uB95/mean(criterion)*100)),sprintf('$ICC_{2,1} = %1.3f$ (%1.2f ; %1.2f)',iccData,lbData,ubDaat), sprintf('r = %1.3f', pearsonR(2)), strcat(sprintf('SWC = %1.2f',SWC),sensibility),sprintf('y = %1.2fx+%1.2f',coeff(2),coeff(1))};
     text(0.05,0.75,str,'Units','normalized','Interpreter','latex','FontSize',9,'Color',[.2 .2 .2])
     hold off
     xlabel('Test','Interpreter','latex')
@@ -153,8 +157,8 @@ elseif strcmpi(cond,'repro')
     structStat.Bias = diff(mean([criterion essaiB]));
     structStat.Pente = sprintf('y = %1.2fx+%1.2f',coeff(2),coeff(1));
     structStat.pearsonR = pearsonR(2);
-    structStat.TEM = TEM;
-    structStat.TEM100 = TEM100;
+    structStat.TEM = [TEM lB95 uB95];
+    structStat.TEM100 = [TEM lB95 uB95]./mean(criterion)*100;
     structStat.SWC = SWC;
 else
     error('Third input must be "valid" or "repro" or not specified (default condition = "valid")')
