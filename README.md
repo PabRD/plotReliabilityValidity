@@ -21,7 +21,7 @@ $$TEM = \frac{{\sigma}_{diff}}{\sqrt{2}}$$
 $$CV = \frac{TEM \cdot 100}{\overline{X_1}}$$
 - ICC (Intraclass Correlation Coefficients): Reported as "ICC2,1" (Shrout and Fleiss convention) or "Two-way mixed effects, absolute agreement, single rater/measurement" (McGraw and Wong convention) for test-retest reliability study (Koo and Li, 2016).
 $$ICC_{2,1} = \frac{MS_R-MS_E}{MS_R+(k-1)MS_E+\frac{k}{n}(MS_C-MS_E)}$$
-with $MS_R = mean\,square\,for\,rows$, $MS_E=mean\,square\,for\,error$; $MS_C=mean\,square\,for\,columns$; $n =number\,of\,subjects$; $k = number\,of\,raters/measurements$.
+with $MS_R = mean\:square\,for\,rows$, $MS_E=mean\,square\,for\,error$; $MS_C=mean\,square\,for\,columns$; $n =number\,of\,subjects$; $k = number\,of\,raters/measurements$.
 - r: Pearson's r
 - SWC (Smallest Worthwile Change): 0.2 times the between participant standard deviation. Sensitivity is classified as good when TEM as CV% is inferior to SWC. Otherwise, sensitivity is classified as poor
 
