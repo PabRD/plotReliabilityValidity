@@ -31,6 +31,15 @@ $$CV = \frac{TEM \cdot 100}{\overline{X_1}}$$
 - ICC (Intraclass Correlation Coefficients): Reported as "ICC2,1" (Shrout and Fleiss convention) or "Two-way mixed effects, absolute agreement, single rater/measurement" (McGraw and Wong convention) for test-retest reliability study (Koo and Li, 2016).
 $$ICC_{2,1} = \frac{MS_R-MS_E}{MS_R+(k-1)MS_E+\frac{k}{n}(MS_C-MS_E)}$$
 with $MS_R = mean\ square\ for\ rows$, $MS_E=mean\ square\ for\ error$; $MS_C=mean\ square\ for\ columns$; $n =number\ of\ subjects$; $k = number\ of\ raters/measurements$.
+
+<details>
+
+<summary>Why $ICC_{2,1}$ for test-retest studies</summary>
+"The only question to ask is whether the actual application will be based on a single measurement or the mean of multiple measurements. As for the “Model” selection, Shrout and Fleiss suggest that 2-way mixed-effects model is appropriate for testing intrarater reliability with multiple scores from the same rater, as it is not reasonable to generalize one rater’s scores to a larger population of raters. Similarly, 2-way mixed-effects model should also be used in test-retest reliability study because repeated measurements cannot be regarded as randomized samples. In addition, absolute agreement definition should always be chosen for both test-retest and intrarater reliability studies because measurements would be meaningless if there is no agreement between repeated measurements." Koo & Li (2016)
+
+</details>
+
+
 - r: Pearson's coefficient of correlation
 - SWC (Smallest Worthwile Change): Sensitivity is classified as good when TEM as CV% is inferior to SWC. Otherwise, sensitivity is classified as poor
 $$SWC = 0.2\cdot\sigma_1$$
