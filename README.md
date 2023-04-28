@@ -34,7 +34,7 @@ pearsonR = corrcoef(criterion,practical)
 
 
 ___________________________________
-##Reliability##
+## Reliability
 - TEM (Typical Error of Measurement), also called Standard Error of Measurement (SEM) (Hopkins, 2015)
 $$TEM = \frac{{\sigma}_{diff}}{\sqrt{2}}$$
 - TEM%: TEM as coefficient of variation (CV) in %
