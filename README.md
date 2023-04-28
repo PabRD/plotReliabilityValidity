@@ -4,7 +4,7 @@ Quickly plot correlation plots for validity and reliability studies with associa
 ______________________________________
 Validity:
 - bias: mean difference between the two methods $$bias = \frac{Y_c-Y_p}{Y_c}$$
-- TEE (Typical Error of Estimate)                                 Siegel and al. (2016) $$TEE = S_y\cdot \sqrt((1-r^2)\frac{n-1}{n-2})$$
+- TEE (Typical Error of Estimate)                                 Siegel and al. (2016) $$TEE = S_y\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %
 - r: Pearson's r
 
