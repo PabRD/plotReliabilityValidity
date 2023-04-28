@@ -3,8 +3,11 @@ Quickly plot correlation plots for validity and reliability studies with associa
 
 ______________________________________
 **Validity**
-- bias: mean difference between the two methods $$bias = \overline{X_p} - \overline{X_c}$$  
+- bias: 
+$$bias = \overline{X_p} - \overline{X_c}$$  
 $$bias 100 = \frac{\overline{X_p} - \overline{X_c}}{\overline{X_c}}\cdot 100$$
+With $\overline{X_c}$ and $\overline{X_p}$ being the average of the criterion and practical group, respectively.
+
 - TEE (Typical Error of Estimate)                                 Siegel and al. (2016) $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %   
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
