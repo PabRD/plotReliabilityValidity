@@ -23,6 +23,17 @@ With $\overline{X_c}$ and $\overline{X_p}$ being the average of the criterion an
 $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %   
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
+- 95% Confidence intervals are calculated as:
+%%\sqrt{\frac{(n-1)s^2}{\chi^2_L}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_R}}%%
+with $n = sample size$ and %\chi^2$ probability with $\alpha = 0.05$ calculated as follows:
+```MATLAB
+df = n-1;
+p1 = alpha/2;
+p2 = 1 - alpha + alpha/2; 
+chi1 = chi2inv(pL,df);
+chi2 = chi2inv(pR,df);
+```
+
 - r: Pearson's coefficient of correlation
 ```MATLAB
 pearsonR = corrcoef(criterion,practical)
