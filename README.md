@@ -52,7 +52,7 @@ with $MS_R = mean\ square\ for\ rows$, $MS_E=mean\ square\ for\ error$; $MS_C=me
 
 
 - r: Pearson's coefficient of correlation
-- SWC (Smallest Worthwile Change): Sensitivity is classified as good when TEM as CV% is inferior to SWC. Otherwise, sensitivity is classified as poor
+- SWC (Smallest Worthwile Change): Sensitivity is classified as good when TEM is inferior to SWC. Otherwise, sensitivity is classified as poor
 $$SWC = 0.2\cdot\sigma_1$$
 with $\sigma_1 = between\ particpant\ standard\ deviation\ of\ first\ test$
 
