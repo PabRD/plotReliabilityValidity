@@ -2,7 +2,7 @@
 Quickly plot correlation plots for validity and reliability studies with associated statistics
 
 ______________________________________
-Validity:
+*Validity*
 - bias: mean difference between the two methods $$bias = \overline{X_p} - \overline{X_c}$$  
 $$bias 100 = \frac{\overline{X_p} - \overline{X_c}}{\overline{X_c}}\cdot 100$$
 - TEE (Typical Error of Estimate)                                 Siegel and al. (2016) $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
@@ -14,7 +14,7 @@ $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 
 
 ___________________________________
-Reliability:
+*Reliability*
 - TEM (Typical Error of Measurement) (Hopkins, 2015)
 $$TEM = \frac{{\sigma}_{diff}}{\sqrt{2}}$$
 - TEM%: TEM as coefficient of variation (CV) in %
