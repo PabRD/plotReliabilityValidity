@@ -8,11 +8,11 @@ $$bias = \overline{X_p} - \overline{X_c}$$
 $$bias 100 = \frac{\overline{X_p} - \overline{X_c}}{\overline{X_c}}\cdot 100$$
 With $\overline{X_c}$ and $\overline{X_p}$ being the average of the criterion and practical group, respectively.
 
-- TEE (Typical Error of Estimate) based on Siegel and al. (2016) and Hopkins (2015)
+- TEE (Typical Error of Estimate) alos called Standard Error of Estimate (SEE) based on Siegel and al. (2016) and Hopkins (2015)
 $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 - TEE%: TEE as coefficient of variation (CV) in %   
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
-- r: Pearson's r 
+- r: Pearson's coefficient of correlation
 ```MATLAB
 pearsonR = corrcoef(criterion,practical)
 % see doc corrcoef for more infos
@@ -24,14 +24,14 @@ pearsonR = corrcoef(criterion,practical)
 
 ___________________________________
 **Reliability**
-- TEM (Typical Error of Measurement) (Hopkins, 2015)
+- TEM (Typical Error of Measurement), also called Standard Error of Measurement (SEM) (Hopkins, 2015)
 $$TEM = \frac{{\sigma}_{diff}}{\sqrt{2}}$$
 - TEM%: TEM as coefficient of variation (CV) in %
 $$CV = \frac{TEM \cdot 100}{\overline{X_1}}$$
 - ICC (Intraclass Correlation Coefficients): Reported as "ICC2,1" (Shrout and Fleiss convention) or "Two-way mixed effects, absolute agreement, single rater/measurement" (McGraw and Wong convention) for test-retest reliability study (Koo and Li, 2016).
 $$ICC_{2,1} = \frac{MS_R-MS_E}{MS_R+(k-1)MS_E+\frac{k}{n}(MS_C-MS_E)}$$
 with $MS_R = mean\ square\ for\ rows$, $MS_E=mean\ square\ for\ error$; $MS_C=mean\ square\ for\ columns$; $n =number\ of\ subjects$; $k = number\ of\ raters/measurements$.
-- r: Pearson's r
+- r: Pearson's coefficient of correlation
 - SWC (Smallest Worthwile Change): Sensitivity is classified as good when TEM as CV% is inferior to SWC. Otherwise, sensitivity is classified as poor
 $$SWC = 0.2\cdot\sigma_1$$
 with $\sigma_1 = between\ particpant\ standard\ deviation\ of\ first\ test$
