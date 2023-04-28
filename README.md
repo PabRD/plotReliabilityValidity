@@ -34,7 +34,7 @@ with $MS_R = mean\ square\ for\ rows$, $MS_E=mean\ square\ for\ error$; $MS_C=me
 
 <details>
 
-<summary>Why $ICC_{2,1}$ for test-retest studies</summary>
+<summary>Why $ICC_{2,1}$ for test-retest studies ?</summary>
 "The only question to ask is whether the actual application will be based on a single measurement or the mean of multiple measurements. As for the “Model” selection, Shrout and Fleiss suggest that 2-way mixed-effects model is appropriate for testing intrarater reliability with multiple scores from the same rater, as it is not reasonable to generalize one rater’s scores to a larger population of raters. Similarly, 2-way mixed-effects model should also be used in test-retest reliability study because repeated measurements cannot be regarded as randomized samples. In addition, absolute agreement definition should always be chosen for both test-retest and intrarater reliability studies because measurements would be meaningless if there is no agreement between repeated measurements." Koo & Li (2016)
 
 </details>
