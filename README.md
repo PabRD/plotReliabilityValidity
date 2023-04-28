@@ -25,13 +25,13 @@ $$TEE = \sigma_c\cdot\sqrt{(1-r^2)\frac{n-1}{n-2}}$$
 $$CV = \frac{TEE \cdot 100}{\overline{X_c}}$$
 - 95% Confidence intervals are calculated as:
 %%\sqrt{\frac{(n-1)s^2}{\chi^2_L}} < \sigma < \sqrt{\frac{(n-1)s^2}{\chi^2_R}}%%
-with $n = sample size$ and %\chi^2$ probability with $\alpha = 0.05$ calculated as follows:
+with $n = sample size$ and $\chi^2$ probability with $\alpha = 0.05$ calculated as follows:
 ```MATLAB
 df = n-1;
 p1 = alpha/2;
 p2 = 1 - alpha + alpha/2; 
-chi1 = chi2inv(pL,df);
-chi2 = chi2inv(pR,df);
+chi1 = chi2inv(p1,df);
+chi2 = chi2inv(p2,df);
 ```
 
 - r: Pearson's coefficient of correlation
